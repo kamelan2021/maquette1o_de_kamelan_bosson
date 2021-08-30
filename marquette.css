@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box; 
+    
+}
+/*le grand conteneur */
+section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 679px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey; 
+    border-radius: 15px;
+} 
+/*la zone ayant l'arrière plan blanche (coté gauche) */
+article{
+    width: 35%;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.article_text{
+    width: 80%;
+    margin: auto; 
+    text-align: justify;
+    position: relative;
+    top:25%;
+}
+.article_text h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 2px 0;
+    line-height: 0.8em;
+}
+.article_text p{
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+}
+.article_text button{
+    height: 25px;
+    background-color: black;
+    color: #fff;
+}
+article a{
+    padding-left:10% ;
+}
+/*la zone ayant l'image en arrière plan(coté droit) */
+
+aside{
+    /* border: 1px solid red; */
+    width: 65%;
+    height: 100%;
+    background-image: url("image/ordinateur.jpg");
+    background-size: 100% 100%;
+}
+/* debut de nos lien*/
+
+nav{
+    display: flex; 
+    background-color: rgb(163, 163, 163);
+}
+ul{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%; 
+    height: 35px;  
+}
+
+a{
+    font-size: 1.1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+}
+.bar{
+    width: 90%;
+    height: 3px;
+    margin-left: 5%;
+    margin-top: -15px;
+    background-color: #fff;
+    
+}
+/* fin de nos lien*/
+
+/*style appliqué à notre div dinning room */
+.dinning_room{
+    width: 60%;
+    height: auto;
+    background-color: #fff;
+    padding:10px 0 10px 30px ;
+    position: relative;
+    top: 66%;
+    left: 40%;
+}
+/*style appliqué à notre div text qui est dans dinning room */
+.text{
+    margin: 10px 0 10px 5px;
+    width:95% ;
+    /* border: 1px black solid; */
+    padding-left: 10px;
+}
+/* style a appliqué aux textes contenu dans la div text*/
+.text h1{
+    text-transform: capitalize;
+    font-size: 2em;
+    font-style: italic;
+    margin: 0;
+}
+.text .para1{
+    text-transform: capitalize;
+}
+.text a{
+    text-transform: capitalize;
+    font-weight: bolder;
+    opacity: 1;
+    color: black;
+}
+/*Media queries*/
+@media (max-width:1000px){
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 1185px;
+    }
+    aside{
+        width: 80%;
+        margin: 0 auto;
+    }
+    article{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .dinning_room{
+        background-color: transparent;
+        width: 80%;
+        position: relative;
+        left: 0;
+        /* border: 2px solid red; */
+        margin: 0 auto;
+    }
+    .text{
+        width: 90%;
+        font-size: 1.2em;
+        line-height: 1em;
+        /* border: 1px solid rgb(29, 219, 77); */
+        color:red;
+    }
+    ul{
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%; 
+        height: 70px;  
+    }
+}
+/* @media (max-width:870px){
+    article{
+        padding-bottom:auto ;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%; 
+        height: 70px;  
+    }
+} */
